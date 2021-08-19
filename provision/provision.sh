@@ -46,7 +46,7 @@ sed -i -e '/<ssl-config>/ i <!--' -e '/<\/ssl-config>/ a -->' \
     -e 's/SsoUserHeader/X-Alfresco-Remote-User/' /opt/alfresco/tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml
 
 # fetch SDK jars from gitlab
-GITLAB_URL=http://gitlab.tms-soft.fr
+GITLAB_URL=https://gitlab.tms-soft.fr
 PROJECT_REF=0.0.2
 JAR_VERSION=1.0-SNAPSHOT
 curl "$GITLAB_URL/api/v4/projects/80/jobs/artifacts/$PROJECT_REF/raw/tms-alfresco-platform-jar/target/tms-alfresco-platform-jar-$JAR_VERSION.jar?job=release" \
